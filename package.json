@@ -5,7 +5,7 @@
     "node": "18.x"
   },
   "description": "Template de Currículo",
-  "main": "./db/app_61.js",
+  "main": "db/app_61.js",
   "scripts": {
     "start": "node app"
   },
