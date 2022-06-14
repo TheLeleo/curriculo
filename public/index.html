@@ -45,9 +45,11 @@
     </div>
 
 
+
     <!-- Wallpaper -->
    <div class="wallpaper"></div>
 
+   
    <!-- Sobre Mim-->
    <div class="about">
    <div class="about-container dark_change" id="about">
@@ -123,13 +125,10 @@
 
     </section>
 
-     
-      
-    <h1 class="heading space">Tec<span>nologias</span>💻</h1>
-
-   
 
      <!-- Inicio icons "tecnologias utilizadas" -->
+     <h1 class="heading space">Tec<span>nologias</span>💻</h1>
+
      <section class="icons-container" id="tecnology">
         
         <div class="icons">
@@ -219,15 +218,41 @@
 
     </section>
 
+    
 
     <!-- Seção projetos -->
     <h1 class="heading" id="projects">Pro<span>jetos</span>👨‍💻</h1>
+
+    <!-- Modal CRUD -->
+    
+    <div class="proj_crud">
+        <button class="btn_crud">Adicionar Projeto </button>
+        <ion-icon name="add-circle-outline"></ion-icon>
+    </div>
+
+    <div class="proj_crud_box" method="post">
+        <div class="proj_crud_box_forms">
+            <form onsubmit="Add_proj();">
+                <button class="proj_crud_close"><ion-icon name="close-outline"></ion-icon></button>
+                <!-- <label class="image_field_style">
+                <ion-icon name="camera-outline"></ion-icon>
+                <input class="image_field" id="proj_image" type="file" accept="image/png, image/jpg, image/gif, image/jpeg, image/html" placeholder="Imagem do Projeto">
+                </label>  -->
+                <input id="proj_image" type="text" placeholder="Imagem do Projeto">
+                <input id="proj_name" type="text" placeholder="Nome do Projeto">
+                <input id="proj_description" type="text" placeholder="Descrição do Projeto">
+                <input id="proj_link" type="text" placeholder="link do Projeto">
+                <input type="submit" id="btn_save" class="proj_send"></input>
+            </forms>
+        </div>
+    </div>
+
 
     <section class="projects_section">
     </section>
     
     
-
+    <!-- Footer -->
     <footer>
         <span></span>
         
@@ -241,9 +266,34 @@
         <p class="copyright">Leandro Custódio Oficial | Todos os Direitos Reservados &copy</p>
     </footer>
     
+
+    <!-- Scripts -->
     <script src="./javaScript/dark.js"></script>
     <script src="./javaScript/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     
+    <!-- Modal Script -->
+    <script>
+        let modalToggle = document.querySelector(".proj_crud");
+        let modal = document.querySelector(".proj_crud_box");
+
+        let closeModal = document.querySelector(".proj_crud_close");
+        let close = document.querySelector(".proj_crud_box");
+
+        let dropDownToggle = document.querySelector('.dropdown');
+        let toggleDropDown = document.querySelector('.dropdown_menu');
+        var dropDownCount = 0;
+
+        modalToggle.onclick = function() {
+            modal.classList.add("modal_show");
+        }
+
+        closeModal.onclick = function() {
+            modal.classList.remove("modal_show");
+        }
+
+        
+    </script>
 </body>
 </html>

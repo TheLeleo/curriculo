@@ -2,6 +2,7 @@
 const projects = document.querySelector(".projects_section");
 
 
+// carregar projetos pelo Data.Json
 function loadProjects(data) {
     fetch('javaScript/data.json')
     .then(response => response.json())
@@ -26,6 +27,7 @@ function loadProjects(data) {
 
 
 
+// Carregar Projetos pelo banco de dados
 function getProjects(){
     let url = '/getprojects'
 
@@ -53,8 +55,40 @@ function getProjects(){
         projects.innerHTML = html;
 }
 
-if (window.location.href == "http://localhost:3000/") {
-    getProjects()
-} else {
+
+// adicionar novo projeto no banco de dados
+function Add_proj(){
+    let url = '/insertdata';
+
+    var image = document.getElementById('proj_image').value; 
+    var name = document.getElementById('proj_name').value; 
+    var description = document.getElementById('proj_description').value; 
+    var link = document.getElementById('proj_link').value; 
+
+    $.ajax({
+        type: "post",
+        url: url,
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        data: JSON.stringify(
+            {
+                "image": image,
+                "name": name,
+                "description": description,
+                "link": link
+            }
+        )
+    });
+    getEmpPage();
+
+        
+}
+
+
+
+
+if (window.location.href == "https://lphbackspace.github.io/site_curriculo/public/index.html") {
     loadProjects()
+} else {
+    getProjects()
 }

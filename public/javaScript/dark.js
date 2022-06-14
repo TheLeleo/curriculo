@@ -2,9 +2,11 @@ let darkToggle = document.querySelector(".dark");
 let darkMode = document.querySelector(".dark_change");
 var change = 0;
 
-darkToggle.onclick = function() {
-   
 
+// Dark Mode
+darkToggle.onclick = function() {
+
+    
     if (change == 0){
         darkMode.classList.add("dark_mode");
         change = 1;
@@ -13,3 +15,4 @@ darkToggle.onclick = function() {
         change = 0;
     }
 }
+

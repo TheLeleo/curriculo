@@ -360,7 +360,121 @@ a{
     background-color: var(--bluehover);
     color: var(--white);
 }
+/*-------------------------------------------*/
+/*-------------------Modal-------------------*/
+/*-------------------------------------------*/
+.proj_crud_box{
+    display: none;
+}
+.modal_show{
+    display: block;
+}
+.proj_crud{
+    width: 300px;
+    height: 65px;
+    background-color: #222222;
+    border-radius: 20px;
+    margin: 40px auto 20px auto;
+    display: flex;
+    
+}
+.proj_crud:hover{
+    cursor: pointer;
+}
+.btn_crud{
+    width: 200px;
+    height: 65px;
+    background-color: var(--blue);
+    color: #fff;
+    font-size: 20px;
+    border-radius: 20px 0 0 20px;
+    border: 2px solid var(--black);
+}
+.proj_crud ion-icon{
+    color: #fff;
+    font-size: 50px;
+    margin: auto;
+}
 
+.proj_crud:hover .btn_crud{
+    background-color: var(--bluehover);
+}
+
+.proj_crud_box_forms{
+    background-color: #222222;
+    height: 70vh;
+    width: 60vh;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--white);
+}
+.proj_crud_box_forms form{
+    display: flex;
+    flex-direction: column;
+}
+.proj_crud_box_forms form input{
+    height: 50px;
+    width: 200px;
+    margin: 5px auto;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.proj_crud_box_forms form .proj_crud_close{
+    margin: 10px;
+    width: 35px;
+    height: 35px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+.proj_crud_box_forms form .proj_crud_close:hover{
+    background-color: var(--bluehover);
+}
+.proj_crud_box_forms form .proj_crud_close:hover ion-icon{
+    color: var(--white);
+}
+
+.proj_crud_box_forms .proj_send{
+    margin: 20px auto;
+    width: 200px;
+    height: 40px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: var(--blue);
+    color: var(--white);
+}
+.proj_crud_box_forms .proj_send:hover{
+    background-color: var(--bluehover);
+}
+.proj_crud_box_forms .image_field{
+    display: none;
+    
+    
+}
+.proj_crud_box_forms .image_field_style{
+    background-color: var(--white);
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    margin: 0 auto 5px auto;
+    padding: 5px 0 0 0;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.proj_crud_box_forms .image_field_style:hover{
+    background-color: var(--bluehover);
+}
+.proj_crud_box_forms .image_field_style:hover ion-icon{
+    color: var(--white);
+}
 /*-------------------------------------------*/
 /*---------------Footer----------------------*/
 /*-------------------------------------------*/
@@ -479,6 +593,28 @@ footer p{
 }
 .dark_mode .icons-container .icons:hover h3{
     color: #222222;
+}
+
+.dark_mode .proj_crud{
+    background-color: var(--blue);
+}
+.dark_mode .proj_crud button{
+    background-color: var(--black);
+    border: 2px solid var(--blue);
+    color: var(--blue);
+}
+.dark_mode .proj_crud:hover button{
+    background-color: var(--bluehover);
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+.dark_mode .proj_crud:hover{
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.dark_mode .proj_crud ion-icon{
+    color: var(--black);
 }
 
 .dark_mode footer span{
