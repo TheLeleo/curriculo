@@ -43,6 +43,8 @@ function getProjects(){
             html += `
             <div class="projects">
                 <div class="project">
+                <button class="project_crud_close"><ion-icon name="trash-outline" onclick="Delete_proj(${element.id});" ></ion-icon></button>
+                <button class="project_crud_close_2"><ion-icon name="create-outline" onclick="Update_proj_modal(${element.id});"></ion-icon></button>
                     <img src="${element.image}">
                     <h1>${element.name}</h1>
                     <p>${element.description}</p>
@@ -79,16 +81,30 @@ function Add_proj(){
             }
         )
     });
-    getEmpPage();
-
-        
 }
 
 
+// Excluir Projetos do Banco
+function Delete_proj(item){
+    // const idInput = parseInt(document.getElementById().value);
+    url = "/userdelete?id="+item;
+    $.ajax({
+        type: "GET",
+        url: url,
+        contextType: "aplication/json; charset=utf-8",
+        dataType: "json"
+    });
+    
+    alert("Item " + item + " excluído com sucesso!");
+    window.location.href = window.location.href;
+
+}
 
 
 if (window.location.href == "https://lphbackspace.github.io/site_curriculo/public/index.html") {
     loadProjects()
-} else {
+} else if (window.location.href == "http://127.0.0.1:5502/index.html") {
+    loadProjects()}
+else {
     getProjects()
 }
