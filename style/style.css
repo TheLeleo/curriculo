@@ -360,6 +360,49 @@ a{
     background-color: var(--bluehover);
     color: var(--white);
 }
+
+.projects .project_crud_close{
+    margin: 5px;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: var(--black);
+}
+.projects .project_crud_close_2{
+    margin: 45px 5px 5px 5px;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 50%;
+    float: right;
+    background-color: var(--black);
+}
+.projects .project_crud_close:hover{
+    background-color: var(--white);
+}
+.projects .project_crud_close ion-icon{
+    color: var(--white);
+    margin: 7px auto;
+}
+.projects .project_crud_close:hover ion-icon{
+    color: var(--black);
+}
+
+.projects .project_crud_close_2:hover{
+    background-color: var(--white);
+}
+.projects .project_crud_close_2 ion-icon{
+    color: var(--white);
+    margin: 7px auto;
+}
+.projects .project_crud_close_2:hover ion-icon{
+    color: var(--black);
+}
 /*-------------------------------------------*/
 /*-------------------Modal-------------------*/
 /*-------------------------------------------*/

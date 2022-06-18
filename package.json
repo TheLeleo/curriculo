@@ -5,11 +5,11 @@
     "node": "18.x"
   },
   "description": "Template de Currículo",
-  "main": "db/app_61.js",
+  "main": "db/app.js",
   "scripts": {
     "start": "node app"
   },
-  "author": "",
+  "author": "Leandro de Oliveira Custódio",
   "license": "MIT",
   "dependencies": {
     "dotenv": "^16.0.1",
@@ -19,6 +19,7 @@
   "devDependencies": {
     "@types/express": "4.17.12",
     "@types/express-serve-static-core": "4.17.20",
-    "@types/node": "14.14.21"
+    "@types/node": "14.14.21",
+    "nodemon": "^2.0.6"
   }
 }
