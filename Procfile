@@ -1,1 +1,1 @@
-web: node db/app.js
+web: node .\db\app
